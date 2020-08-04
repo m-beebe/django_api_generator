@@ -42,7 +42,7 @@ py manage.py runserver
 ```
 Navigate to http://127.0.0.1:8000/adder/?num1=12&num2=30
 
-#TO-DO:
+# TO-DO:
 - automatically generate a front page with documentation of all methods callable from API
 - account for more types in methods
 - account for more complex classes than one file
