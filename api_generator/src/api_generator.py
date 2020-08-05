@@ -36,7 +36,7 @@ class APIGenerator:
         Create an initial django project to be augmented.
         :return: None
         """
-        dirs = [x[0] for x in os.walk('.')]
+        dirs = [x[0] for x in os.walk('../..')]
         if f".\\{self.class_name}" not in dirs:
             os.system(f"django-admin startproject {self.class_name}")
 
