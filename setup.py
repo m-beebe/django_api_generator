@@ -1,16 +1,20 @@
 from setuptools import setup, find_packages
-from .src import __version__
+from src import __version__
+
+with open('README.md', 'r') as readme_file:
+    long_description = readme_file.read()
 
 setup(
     name='django_api_generator',
     version=__version__,
     packages=find_packages(exclude=[]),
-    url='',
+    url='https://github.com/m-beebe/django_api_generator',
     license='',
     author='Bobeegan',
     author_email='',
     py_modules=['api_generator'],
-    description='',
+    description='Generate Django APIs from Python classes',
+    long_description = long_description,
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Programming Language :: Python :: 3",
