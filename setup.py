@@ -14,7 +14,7 @@ setup(
     license='',
     author='Bobeegan',
     author_email='',
-    py_modules=['api_generator'],
+    py_modules=['api_generator', 'cli'],
     install_requires = ['click > 7.1'],
     entry_points='''
         [console_scripts]

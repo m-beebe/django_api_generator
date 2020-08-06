@@ -1,5 +1,5 @@
 import click
-from .django_api_generator import APIGenerator
+from .api_generator import APIGenerator
 
 @click.command(
     context_settings={"ignore_unknown_options": True},
