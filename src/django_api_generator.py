@@ -165,3 +165,11 @@ class APIGenerator:
                 for path in urlpatterns:
                     urlwriter.write(path)
                 urlwriter.write("]\n")
+
+
+if __name__ == '__main__':
+    print('''
+    Usage: django_api_generator.py [OPTIONS] SOURCE_FILE
+    Try 'django_api_generator.py --help' for help.
+    ''')
+    
