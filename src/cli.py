@@ -6,7 +6,7 @@ from .django_api_generator import APIGenerator
     help='Convert the class within the SOURCE_FILE.py into a Django API'
 )
 @click.argument('source_file', type=click.Path(exists=True))
-def django_api_generator(source_file):
+def generate_api(source_file):
     print('DJANGO API GENERATOR')
     module_name = source_file.split('.')[0]
     

@@ -18,7 +18,7 @@ setup(
     install_requires = ['click > 7.1'],
     entry_points='''
         [console_scripts]
-        django_api_generator=src.cli:django_api_generator
+        django_api_generator=src.cli:generate_api
     ''',
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
