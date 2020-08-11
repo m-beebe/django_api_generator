@@ -1,5 +1,9 @@
 import click
-from . import utilities
+from pathlib import Path
+from .utilities import (
+    file_is_python,
+    load_module,
+)
 from .api_generator import APIGenerator
 
 @click.command(
@@ -10,16 +14,16 @@ from .api_generator import APIGenerator
 def generate_api(source_file):
     print('DJANGO API GENERATOR')
 
-    utilities.file_is_python(source_file)
-    exit()
+    file_is_python(source_file)
 
-
-    module_name = source_file.split('.')[0]
+    module_path = Path(source_file).resolve()
     
-    module = __import__(module_name)
+    module_name = module_path.name.split('.')[0]
+
+    module = load_module(module_name)
 
     class_for_api = getattr(module, module_name)()
-    
+        
     APIGenerator(class_for_api)
     
 
