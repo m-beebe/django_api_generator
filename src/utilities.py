@@ -30,5 +30,26 @@ def load_module(module_name):
     
     return module
 
-# def get_class(module, class_name):
-#     api_class = getattr(module, module_name)
+def get_class(module, module_name):
+    print(module, module_name)
+    try:
+        api_class = getattr(module, module_name)
+
+
+    except AttributeError as error:
+        click.echo(error)
+        click.echo(
+            f'Ensure that {module} contains a class named "{module_name}"'
+        )
+        exit()
+    else:
+        return api_class
+    
+
+def instantiate_class(class_name):
+    try:
+        instance = class_name()
+    except AttributeError as error:
+        click.echo(error)
+    
+    return instance
