@@ -3,8 +3,11 @@ from pathlib import Path
 from .utilities import (
     file_is_python,
     load_module,
+<<<<<<< HEAD
     get_class,
     instantiate_class
+=======
+>>>>>>> eb6d3ee41ad667aff1222a28a9245c3641dc73ac
 )
 from .api_generator import APIGenerator
 
