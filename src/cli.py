@@ -3,8 +3,11 @@ from pathlib import Path
 from .utilities import (
     file_is_python,
     load_module,
+<<<<<<< HEAD
     get_class,
     instantiate_class
+=======
+>>>>>>> eb6d3ee41ad667aff1222a28a9245c3641dc73ac
 )
 from .api_generator import APIGenerator
 
@@ -21,6 +24,7 @@ def generate_api(source_file):
     module_path = Path(source_file).resolve()
     
     module_name = module_path.name.split('.')[0]
+<<<<<<< HEAD
 
     module = load_module(module_name)
 
@@ -29,6 +33,14 @@ def generate_api(source_file):
     instance = instantiate_class(class_for_api)
 
     APIGenerator(instance)
+=======
+
+    module = load_module(module_name)
+
+    class_for_api = getattr(module, module_name)()
+        
+    APIGenerator(class_for_api)
+>>>>>>> eb6d3ee41ad667aff1222a28a9245c3641dc73ac
     
 
     

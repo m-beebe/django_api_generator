@@ -30,6 +30,7 @@ def load_module(module_name):
     
     return module
 
+<<<<<<< HEAD
 def get_class(module, module_name):
     print(module, module_name)
     try:
@@ -53,3 +54,6 @@ def instantiate_class(class_name):
         click.echo(error)
     
     return instance
+=======
+def get_class(module, class_name)
+>>>>>>> eb6d3ee41ad667aff1222a28a9245c3641dc73ac
